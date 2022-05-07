@@ -6,7 +6,7 @@ module.exports = {
     publicRuntimeConfig: {
         apiUrl: process.env.NODE_ENV === 'development'
             ? 'http://localhost:3000/api' // development api
-            : 'https://bookutfpr.vercel.app/api' // production api
+            : 'https://book-iota.vercel.app/api' // production api
     }
     
 }
