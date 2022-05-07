@@ -33,7 +33,7 @@ function update(id, params) {
 
     // update and save
     Object.assign(user, params);
-    saveData();
+    //saveData();
 }
 
 // prefixed with underscore '_' because 'delete' is a reserved word in javascript
