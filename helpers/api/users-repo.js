@@ -33,7 +33,7 @@ function update(id, params) {
 
     // update and save
     Object.assign(user, params);
-    //saveData();
+    saveData();
 }
 
 // prefixed with underscore '_' because 'delete' is a reserved word in javascript
@@ -47,5 +47,5 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
+    fs.writeFileSync('../../data/users.json', JSON.stringify(users, null, 4));
 }
