@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // users in JSON file for simplicity, store in a db for production applications
-let users = require('public/users.json');
+let users = require('data/users.json');
 
 export const usersRepo = {
     getAll: () => users,
@@ -47,6 +47,5 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    //const filePath = `${process.cwd()}/public/users.json`;
-    //fs.writeFileSync(filePath, JSON.stringify(users, null, 4), {flag: "wx"});
+    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
 }
