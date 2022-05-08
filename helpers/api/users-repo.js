@@ -47,6 +47,6 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    const filePath = `data/users.json`;
-    fs.writeFile(filePath, JSON.stringify(users, null, 4));
+    const filePath = `${process.cwd()}/data/users.json`;
+    fs.writeFileSync(filePath, JSON.stringify(users, null, 4), { flag: 'a+' });
 }
