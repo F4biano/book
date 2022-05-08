@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { join } = require('path')
 
 // users in JSON file for simplicity, store in a db for production applications
 let users = require('data/users.json');
@@ -48,6 +47,6 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    const filePath = join(__dirname) + '/data/users.json';
+    const filePath = __dirname + '/data/users.json';
     fs.writeFileSync(filePath, JSON.stringify(users, null, 4), { flag: 'a+' });
 }
