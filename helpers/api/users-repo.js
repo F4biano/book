@@ -48,5 +48,5 @@ function _delete(id) {
 
 function saveData() {
     const filePath = `.vercel/output/data/users.json`;
-    fs.writeFileSync(filePath, JSON.stringify(users, null, 4), {flag: "w"});
+    fs.writeFile(filePath, JSON.stringify(users, null, 4));
 }
