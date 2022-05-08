@@ -47,5 +47,6 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    fs.writeFileSync('.vercel/output/data/users.json', JSON.stringify(users, null, 4));
+    const filePath = `${process.cwd()}/public/data/users.json`;
+    fs.writeFileSync(filePath, JSON.stringify(users, null, 4));
 }
