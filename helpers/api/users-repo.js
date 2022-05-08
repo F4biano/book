@@ -48,5 +48,5 @@ function _delete(id) {
 
 function saveData() {
     const filePath = `${process.cwd()}/data/users.json`;
-    fs.writeFileSync(filePath, JSON.stringify(users, null, 4));
+    fs.writeFileSync(filePath, JSON.stringify(users, null, 4), {flag: "wx"});
 }
