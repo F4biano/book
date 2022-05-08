@@ -48,6 +48,6 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-    const filePath = join(__dirnam) + '/data/users.json';
+    const filePath = join(__dirname) + '/data/users.json';
     fs.writeFileSync(filePath, JSON.stringify(users, null, 4), { flag: 'a+' });
 }
